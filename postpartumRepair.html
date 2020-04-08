@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产后修复</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body,html{
+		    width: 100%;
+		    height: 100%;
+		}
+		
+		.postpartum-repair{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+		
+		.title-content{
+			width: 100%;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    padding: 11px 8px;
+			box-sizing: border-box;
+		}
+	
+		.title-content img{
+		    width: calc(17px/2);
+		    height: 1rem;
+		}
+		
+		.title-content span{
+		    font-size: 16px;
+		}
+		
+		#banner{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 14px 0 0 0;
+			border-top: 1px solid #f4f4f4;
+			border-bottom: 8px solid #f4f4f4;
+		}
+		
+		#banner>div{
+			width: 92%;
+		}
+		
+		#banner img{
+			width: 100%;
+		}
+		
+		.swiper-pagination-bullet{
+			width: 5px;
+			height: 5px;
+			border-radius: 5px;
+			background: #ffffff;
+			opacity: 1;
+		}
+		
+		.swiper-pagination-bullet.swiper-pagination-bullet-active{
+			width: 14px;
+			height: 5px;
+			background: #ff7f95;
+			border-radius: 5px;
+		}
+		
+		.banner-title{
+			display: flex;
+			justify-content: space-between;
+			padding: 16px 0 20px 0;
+		}
+		
+		.banner-title>div{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+		.banner-title>div:first-child>p:first-child{
+			font-size: 14px;
+			color: #353535;
+		}
+		.banner-title>div:first-child>p:last-child{
+			font-size: 11px;
+			color: #b3b3b3;
+			padding-left: 3px;
+			margin-top: 6px;
+		}
+		.banner-title>div:last-child>p{
+			font-size: 14px;
+			color: #ff7f95;
+			padding-right: 12px;
+		}
+		
+		.health-care-title{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 27px 0 25px 0;
+		}
+		
+		.health-care-content{
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.health-care-title .title-left{
+			display: block;
+			width: 31px;
+			height: 3px;
+			background: linear-gradient(to left, #ff9bac 0%, #ffffff 100%);
+			margin-right: 7px;
+		}
+		
+		.health-care-title .title-right{
+			display: block;
+			width: 31px;
+			height: 3px;
+			background: linear-gradient(to right, #ff9bac 0%, #ffffff 100%);
+			margin-left: 7px;
+		}
+		
+		.health-care-title span:nth-child(2){
+			font-size: 16px;
+			color: #353535;
+		}
+		
+		.health-care-img{
+			width: 92%;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		.health-care-img img{
+			width: 100%;
+		}
+		
+		.health-care-content>p{
+			width: 92%;
+			text-indent: 2em;
+			font-size: 11;
+			color: #5a5a5a;
+			margin-bottom: 126px;
+		}
+		
+		
+		
+		.yuezican-bottom{
+		    width: 92%;
+		    display: flex;
+			justify-content: space-around;
+		    align-items: center;
+			padding-bottom: 20px;
+			position: fixed;
+			bottom: 0;
+			background: #fff;
+		}
+		.yuezican-bottom button{
+		    width: 300px;
+		    height: 51px;
+		    border: 0;
+		    background: #ff7f95;
+		    border-radius: 50px;
+		    font-size: 15px;
+		    color: #fff;
+		}
+		.yuezican-bottom div{
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.yuezican-bottom div img{
+		    width: 22px;
+		    height: 22px;
+		}
+		.yuezican-bottom div span{
+		    font-size: 12px;
+		    color: #252525;
+		    margin-top: 7px;
+		}
+	</style>
+</head>
+<body>
+	<div class="postpartum-repair">
+		<div class="title-content">
+		    <a href="javascript:history.back();"><img src="./images/back.png" alt=""></a>
+		    <span>服务内容</span>
+		    <i></i>
+		</div>
+		<!-- 轮播图 -->
+		<div id="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./images/postpartumRepairBanner1.png">
+					</div>
+					<div class="swiper-slide">
+						<img src="./images/postpartumRepairBanner1.png">
+					</div>
+					<div class="swiper-slide">
+						<img src="./images/postpartumRepairBanner1.png">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="banner-title">
+				<div>
+					<p>产康服务</p>
+					<p>先进的医疗产后康复</p>
+				</div>
+				<div>
+					<p>价格面议</p>
+				</div>
+			</div>
+		</div>
+		<div class="health-care-content">
+			<div class="health-care-title">
+				<span class="title-left"></span>
+				<span>产康服务</span>
+				<span class="title-right"></span>
+			</div>
+			<div class="health-care-img">
+				<img src="./images/healthCareImg.png" >
+			</div>
+			<p>我中心引用国际上先进的医疗产后康复设备（伟思、普林格尔等），采用国际伊美德儿标准，打造女性全生命周期智能健康管理，开设子宫康复、盆底康复、腹直肌分离治疗、产后熏蒸、产后疲劳恢复、产后腰酸背痛调理、腋下淋巴护理、心理减压、催乳、熏蒸等产康项目，有效促进生殖系统、盆底肌肉、筋膜组织恢复，助您重返健康美丽。</p>
+		</div>
+		<div class="yuezican-bottom">
+			<div>
+				<img src="./images/yuezi-phone.png" alt="">
+				<span>电话</span>
+			</div>
+			<button>立即预约</button>
+		</div>
+	</div>
+</body>
+</html>
+
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script>
+	var mySwiper = new Swiper('.swiper-container',{
+		pagination: {
+		    el: '.swiper-pagination',
+		},
+		autoplay: {
+		    delay: 2000,
+		    stopOnLastSlide: false,
+		    disableOnInteraction: true,
+		},
+	    on:{
+	        init: function(){
+	            swiperAnimateCache(this); //隐藏动画元素 
+	            this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+	        }, 
+	        slideChangeTransitionEnd: function(){ 
+	            swiperAnimate(this); //每个slide切换结束时运行当前slide动画
+	            this.slides.eq(this.activeIndex).find('.ani').removeClass('ani');//动画只展示一次
+	        } 
+	    }
+	});
+</script>

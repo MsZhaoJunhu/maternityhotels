@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/animate.min.css" />
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-pagination-bullet{
+			width: 5px;
+			height: 5px;
+			border-radius: 5px;
+			transform: translateY(-20px);
+			background: #fff;
+			opacity: 1;
+		}
+		.swiper-pagination-bullet-active{
+			width: 15px;
+			background: #ff7f95;
+		}
+		.TopImage{
+			width: 92%;
+			margin: 0 auto;
+			height: auto;
+			padding: 22px 0;
+		}
+		.TopImage  img{
+			width: 100%;
+		}
+		.title-content{
+            height: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0.5rem;
+        }
+        .title-content img{
+            width: calc(17px/2);
+            height: 1rem;
+        }
+        .title-content span{
+            font-size: 16px;
+        }
+        .price,.Package_content,.meal,.project{
+        	width: 92%;
+			margin: 0 auto;
+			height: auto;
+        }
+        .price img,.meal img{
+        	width: 100%;
+        }
+        .font_content,#free>p{
+        	font-size: 25px;
+        	font-weight: bold;
+        	color: #353535;
+        	text-align: center;
+        	margin:	25px 0;
+        }
+        .service_content{
+        	position: relative;
+        }
+        .service{
+        	display: flex;
+        	flex-direction: row;
+        	justify-content: space-around;
+        	}
+        .service_content>img{
+        	width: 60px;
+        	height: 60px;
+        	border-radius: 50%;
+        	z-index: 99;
+        	position: absolute;
+        	left: 25px;
+        }
+        #free{
+        	width: 101px;
+        	height: 97.5px;
+        	border: 1px solid #e9d1d5;
+        	border-radius: 7px;
+        	z-index: 1;
+        	margin-top:25px;
+        }
+        #free>p{
+        	margin: 0;
+        	line-height: 102px;
+        	font-size: 13px;
+        }
+        #free>button{
+        	width: 50px;
+        	height: 22px;
+        	background-color: #ffaa85;
+        	border-radius: 5px;
+        	position: absolute;
+            color: #fff;
+        	top:97px;
+        	left: 27px;
+        	border: 0;
+        	font-size: 13px;
+        }
+		.meal{
+			margin:35px auto;
+		}
+		.title{
+			height: 35px;
+			text-align: center;
+			position: relative;
+		}
+		.title>span{
+			line-height: 35px;
+			font-size: 25px;
+			font-weight: bold;
+			color: #353535;
+		}
+		#icon1,#icon2{
+			transform: translateY(-5px);
+		}
+		#icon1{
+			margin-right: 10px;
+		}
+		#icon2{
+			margin-left: 10px;
+		}
+		.project_content{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.project_content table{
+			width: 100%;
+			border-collapse:collapse;
+		}
+		table{
+			border-left: 1px solid #ffaebc;
+			border-right: 1px solid #ffaebc;
+			border-bottom: 1px solid #ffaebc;
+			margin-top: 12px;
+			margin-bottom: 15px;
+		}
+		table td{
+			height: 30px;
+			font-size: 12px;
+			padding: 10px;
+			font-weight: 800;
+		}
+		table td:first-child{ 
+			background: #ff9cad;
+			color: #fff;
+			border-top: 1px solid #ffaebc;
+		}
+		table td:not(:first-child){
+			border:0;
+			border-top: 1px solid #ffaebc;
+			color: #353535;
+		}
+	</style>
+	<body>
+		<div class="title-content">
+        <a href="javascript:history.back();"><img src="./images/back.png" alt=""></a>
+        <span>雅致套房</span>
+        <i></i>
+    </div>
+    <div class="swiper-container TopImage">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/img3.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/img3.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/img3.png" alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    <!-- 如果需要导航按钮 -->
+	    <!--<div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>-->
+   </div>
+   <div class="price">
+   		<div><img src="./images/elegant.png"/></div>
+   </div>
+   <div class="Package_content">
+   		<div class="font_content"><h3>套餐内容</h3></div>
+   		<div class="service">
+   			<div class="service_content">
+   				<img src="./images/Package_content1.png" alt="" />
+   				<div id="free">
+   					<p>综合服务</p>
+   					<button>免费</button>
+   				</div>
+   			</div>
+   			<div class="service_content">
+   				<img src="./images/Package_content2.png" alt="" />
+   				<div id="free">
+   					<p>妈妈服务</p>
+   					<button>免费</button>
+   				</div>
+   			</div>
+   			<div class="service_content">
+   				<img src="./images/Package_content3.png" alt="" />
+   				<div id="free">
+   					<p>宝宝服务</p>
+   					<button>免费</button>
+   				</div>
+   			</div>
+   		</div>
+   </div>
+   <div class="meal">
+   	<img src="./images/elegant_meal.png" alt="" />
+   </div>
+   <div class="project">
+   		<div class="title">
+   			<img src="./images/icon1.png" alt="" id="icon1"/>
+   			<span>产康项目</span>
+   			<img src="./images/icon2.png" alt="" id="icon2"/>
+   		</div>
+   		<div class="project_content">
+   			<table border="1" cellspacing="2" cellpadding="">
+   				<tr>
+   					<td>一对一专业产后评估</td>
+					<td>1次</td>
+					<td>指导盆底康复训练</td>
+					<td>按需</td>
+   				</tr>
+   				<tr>
+   					<td>一对一专业私密检测</td>
+					<td>1次</td>
+					<td>骨盆约束收缩术</td>
+					<td>按需</td>
+   				</tr>
+   				<tr>
+   					<td>盆底肌检测</td>
+					<td>1次</td>
+					<td>子宫恢复情况检测</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>子宫恢复</td>
+					<td>2次</td>
+					<td>盆底肌肌力情况检测</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>中药泡脚</td>
+					<td>每日/1次</td>
+					<td>腹直肌情况检测</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>中药督脉熏蒸</td>
+					<td>1次</td>
+					<td>骨盆情况检测</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>盆底肌修复</td>
+					<td>1次</td>
+					<td>体型情况检测</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>祛水肿腿部检测</td>
+					<td>1次</td>
+					<td>体态情况检测</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>头疗</td>
+					<td>2次</td>
+					<td>肩颈舒缓理疗</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>手部护理</td>
+					<td>2次</td>
+					<td>腰背部舒缓理疗</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>上肢关节放松</td>
+					<td>2次</td>
+					<td>一对一产后恢复操</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>下肢关节放松</td>
+					<td>2次</td>
+					<td>臀部塑形</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>泌乳指导</td>
+					<td>按需</td>
+					<td>女性花园卵巢恢复</td>
+					<td>1次</td>
+   				</tr>
+   				<tr>
+   					<td>乳房护理</td>
+					<td>按需</td>
+					<td>大腿塑形</td>
+					<td>2次</td>
+   				</tr>
+   				<tr>
+   					<td>子宫复位调息</td>
+					<td>按需</td>
+					<td></td>
+					<td></td>
+   				</tr>
+   			</table>
+   		</div>
+   </div>
+	</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container',{
+		pagination: {
+		    el: '.swiper-pagination',
+		},
+		autoplay: {
+		    delay: 2000,
+		    stopOnLastSlide: false,
+		    disableOnInteraction: true,
+		},
+	    on:{
+	        init: function(){
+	            swiperAnimateCache(this); //隐藏动画元素 
+	            this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+	        }, 
+	        slideChangeTransitionEnd: function(){ 
+	            swiperAnimate(this); //每个slide切换结束时运行当前slide动画
+	            this.slides.eq(this.activeIndex).find('.ani').removeClass('ani');//动画只展示一次
+	        } 
+	    }
+	});
+	
+</script>

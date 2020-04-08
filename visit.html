@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约参观</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .title-content{
+            height: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0.5rem;
+        }
+        .title-content img{
+            width: 9px;
+            height: 1rem;
+        }
+        .title-content span{
+            font-size: 16px;
+        }
+		.form-content{
+			width: 92%;
+			margin: 0 auto;
+			height: auto;
+		}
+		.form-content p{
+			font-size: 14px;
+			color:#000000;
+			line-height: 3rem;
+		}
+		.form-content div{
+			width: 100%;
+			height: auto;
+			background: #f7f7f7;
+		}
+		.form-content input{
+			background: none;
+			border: 0;
+			width: 100%;
+			height: 45px;
+			text-indent: 1em;
+		}
+		.form-content button{
+			margin-top: 25px;
+			width: 100%;
+			height: 45px;
+			border: 0;
+			background: linear-gradient(to right, #ff7f95 0%, #ffaa85 100%);
+			color: #fff;
+			border-radius: 6px;
+			font-size: 15px;
+			box-shadow: 0px 3px 3px #ffb6c3;
+		}
+    </style>
+</head>
+<body>
+    <div class="title-content">
+        <a href="javascript:history.back();"><img src="./images/back.png" onclick="historyBack" alt=""></a>
+        <span>预约参观</span>
+        <i></i>
+    </div>
+    <div class="form-content">
+			<p>姓名</p>
+			<div>
+				<input type="text" />
+			</div>
+			<p>预产期</p>
+			<div>
+				<input type="text" />
+			</div>
+			<p>联系电话</p>
+			<div>
+				<input type="number" />
+			</div>
+			<button type="button">确认提交</button>
+	</div>
+</body>
+</html>
+
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script>
+    
+</script>

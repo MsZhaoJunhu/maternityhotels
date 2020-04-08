@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约参观</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.map-icon{
+			width: 3rem;
+			height: 3rem;
+			position: absolute;
+			z-index: 30;
+			top: 50%;
+			left: 50%;
+			transform: translate(-1.5rem,-1.5rem);
+		}
+		.map-name{
+			position: absolute;
+			z-index: 30;
+			bottom: 25px;
+			height: 58px;
+			width: calc(100% - 30px);
+			margin: 0 15px;
+			background: linear-gradient(to right, #ff7f95 0%, #ffaa85 100%);
+			border-radius: 5px;
+			text-align: center;
+			padding: 0 12px;
+			box-sizing: border-box;
+			font-size: 15px;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.go-here{
+			display: block;
+			width: 54px;
+			height: 54px;
+			border-radius: 27px;
+			background: #fff;
+			transform: translateY(-17px);
+			color: #000;
+			font-size: 11px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+		}
+		#container a>div{
+			display: none;
+		}
+		.back-par{
+			display: block;
+			width: 32px;
+			height: 32px;
+			border-radius: 18px;
+			background: #fff;
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0 0 5px #ff7f95;
+		}
+		.back-par img{
+			width: 20px;
+		}
+	</style>
+</head>
+<body onload="init()">
+	<!-- <h2>地图</h2> -->
+	<div id="container" style="width:100vw;height:100vh;"></div>
+	<div class="map-name">
+		重庆市璧山区璧泉街道双星大道36号
+		<a class="go-here" href="index.html">
+			<img src="./images/toTop.png" style="width: 14px;height: 16px;" >
+			<span style="font-size: 11px;margin-top: 5px;color: #4d4d4d;">去这里</span>
+		</a>
+	</div>
+	<a class="back-par" href="javascript:history.back();">
+		<img src="./images/toLeft.png" >
+	</a>
+	<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=W4SBZ-Z3H6X-VNT4X-7IDGW-O7UXH-EABOQ"></script>
+	<script>
+		var myLatlng = new qq.maps.LatLng(29.575650,106.225810);
+		var myOptions = {
+			zoom: 17,
+			center: myLatlng,
+			disableDefaultUI: true    //禁止所有控件
+		}
+		var map = new qq.maps.Map(document.getElementById("container"), myOptions);
+		 
+		var marker = new qq.maps.Marker({
+		    position: myLatlng,
+		    map: map,
+		});
+	</script>
+</body>
+</html>

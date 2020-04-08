@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/animate.min.css" />
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-pagination{
+			bottom: -10px !important;
+		}
+		.swiper-pagination-bullet{
+			width: 5px;
+			height: 5px;
+			border-radius: 5px;
+			transform: translateY(-20px);
+			background: #fff;
+			opacity: 1;
+		}
+		.swiper-pagination-bullet-active{
+			width: 15px;
+			background: #ff7f95;
+		}
+		.TopImage{
+			width: 92%;
+			margin: 0 auto;
+			height: auto;
+			padding: 22px 0;
+			padding-bottom: 0;
+		}
+		.TopImage  img{
+			width: 100%;
+		}
+		.title-content{
+            height: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0.5rem;
+        }
+        .title-content img{
+            width: calc(17px/2);
+            height: 1rem;
+        }
+        .title-content span{
+            font-size: 16px;
+        }
+        .btn-content-par>div:first-child>p:first-child{
+            color: #353535;
+            font-size: 14px;
+        }
+        .btn-content-par{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:15px 15px;
+         }
+        .btn-content-par>div:first-child>p:last-child{
+            color: #b3b3b3;
+            font-size: 11px;
+            margin-top: 8px;
+        }
+        .btn-content-par>div:last-child{
+            display: flex;
+            align-items: center;
+        }
+        .btn-content-par>div:last-child>span{
+            color: #ff7f95;
+            font-size: 13px;
+        }
+        .btn-content-par>div:last-child>i{
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #ffaa85;
+            border-radius: 5px;
+            margin: 0 6px;
+        }
+        .btn-content-par>div:last-child>button{
+            color: #fff;
+            background: #ff7f95;
+            font-size: 12px;
+            border: 0;
+            width: 74px;
+            height: 29px;
+            border-radius:29px;
+        }
+        .title{
+			height: 35px;
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 28px;
+		}
+		.title>span{
+			line-height: 35px;
+			font-size: 25px;
+			font-weight: bold;
+			color: #353535;
+		}
+        #icon1,#icon2{
+			transform: translateY(-5px);
+		}
+		#icon1{
+			margin-right: 10px;
+		}
+		#icon2{
+			margin-left: 10px;
+		}
+		.ruzhu,.tese{
+			background-color: #fff0ea;
+		}
+		.richang,.dalibao{
+			background-color: #fdf4f6;
+		}
+		.guannei{
+			background-color:  #f9f9f9;
+		}
+		.ruzhu,.richang,.tese,.yuezi,.guannei,.dalibao{
+			margin:0 15px;
+			border-radius: 10px;
+		}
+		.huli{
+			text-align: center;
+			color: #c15425;
+			font-size: 18px;
+			margin-top: 30px;
+			padding-top: 23px;
+			margin-bottom: 25px;
+		}
+		.container{
+			border-top:8px solid #f4f4f4 ;
+			padding-bottom: 100px;
+		}
+		/*.hulixiangqing span:before{
+			height: 15px;
+			width: 15px;
+			display: inline-block;
+			content: '';
+			background-image: url('./images/yes.png');
+			background-size: cover;
+			margin-left: 13px;
+		}*/
+		.hulixiangqing{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			padding: 0 13px;
+			padding-bottom: 28px;
+			/* white-space: nowrap; */
+		}
+		.hulixiangqing div{
+			width: 50%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		.hulixiangqing img{
+			flex-shrink: 0;
+			display: block;
+			height: 15px;
+			transform: translateY(3px);
+			width: 15px;
+		}
+		.hulixiangqing span{
+			display: block;
+			margin-left:2px;
+			font-size: 12px;
+			color: #353535;
+		}
+		.icon img{
+			width: 42px;
+			height: 42px;
+			margin-bottom: 5px;
+		}
+		.richang_container,.dalibao_container,.phone{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.richangxiangqing{
+			padding: 12px;
+		}
+		.icon{
+			width: 33%;
+			text-align: center;
+			font-size: 12px;
+			color: #3e3e3e;
+			margin-bottom: 12px;
+		}
+		.huili2{
+			color: #d95269;
+		}
+
+		.tese_service{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 12px;
+		}
+		.tese_container{
+			font-size: 11px;
+			border-radius:14px;
+			width: 152px;
+			height: 29px;
+			line-height: 29px;
+			text-align: center;
+			background: #ffaa85;
+			color: #ffffff;
+		}
+		.tese_more{
+			padding-top: 0;
+			padding-bottom: 32px;
+		}
+		.yuezi-content{
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.yuezi_huli{
+			width: 100%;
+			color: #353535;
+		}
+		.yuezi_container{
+			width: 48%;
+			height: 60px;
+			border-radius: 5px;
+			border:1px solid #f6dddd;
+			background: #fef8f8;
+			margin:7px 0;
+			line-height: 60px;
+			padding-left: 11px;
+			box-sizing: border-box;
+		}
+		.yuezi_container i,.yuezi_container span{
+			line-height: 35px;	
+		}
+		.yuezi_container i{
+			color: #ff7f95;
+			font-size: 12px;
+		}
+		.yuezi_container span{
+			font-size: 12px;
+			color: #3E3E3E;
+		}
+		.xiangqing{
+			margin:0 15px;
+			padding: 12px;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.xiangqing img{
+			width: 23px;
+			height: 23px;
+			margin-right: 5px;
+			transform: translateY(5px);
+		}
+		.xiangqing span{
+			font-size: 12px;
+			color:#353535;
+		}
+		.dalibao{
+			padding: 0 36px;
+		}
+		.dalibao_neirong {
+			width: 42px;
+			height: 42px;
+			margin-bottom: 17px;
+			border-radius: 50%;
+			line-height: 42px;
+			text-align: center;
+			background: #ff7f95;
+		}
+		.dalibao_neirong span{
+			font-size: 12px;
+			color: #fff;
+		}
+		.dalibao_other{
+			opacity: 0;
+		}
+		.phone{
+			width: 100%;
+			margin: 0 auto;
+			padding: 15px;
+			position: fixed;
+			bottom: 0;
+			background: #fff;
+		}
+		.phone_icon{
+			transform: translateY(7px);
+			margin-right: 23px;
+			white-space: nowrap;
+		}
+		.phone_icon img{
+			width: 22px;
+			height: 22px;
+		}
+		.phone_icon p{
+			font-size: 12px;
+			color: #252525;
+		}
+		.btn{
+			width: 300px;
+			height: 52px;
+			text-align: center;
+			line-height: 52px;
+			background-color: #ff7f95;
+			color: #fff;
+			margin-right: 30px;
+			border-radius: 25px;
+			
+		}
+		.baby-services-content{
+			 margin: 0 15px;
+		}
+		.baby-top-title{
+			height: 81px;
+			background: url("./images/comprehensiveYuezican.png");
+			border-top-left-radius: 7px;
+			border-top-right-radius: 7px;
+			position: relative;
+			background-size: 100% auto;
+		}
+		.baby-top-title span{
+			position: absolute;
+			right: 8px;
+			line-height: 81px;
+			font-size: 22px;
+			color: #fff;
+		}
+		.baby-service-pro{
+			padding: 0 9px;
+			background: #fef8f8;
+		}
+		.baby-service-pro>div{
+			height: 73px;
+			display:flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.baby-service-number{
+			width: 35px;
+			height: 35px;
+			border-radius: 18px;
+			background: #ffc0cb;
+			color: #fff;
+			font-size: 14px ;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+		}
+		.baby-service-pro span{
+			font-size: 13px;
+			color: #353535;
+			margin-left: 13px;
+		}
+		.baby-service-pro+.baby-service-pro>div{
+			border-top: 1px solid #eaeaea;
+		}
+		.baby-especially{
+			margin: 0 15px;
+			margin-top: 17px;
+		}
+		.baby-especially>div{
+			margin-top: 32px;
+		}
+		.baby-especially>p{
+			font-size: 17px;
+			color: #353535;
+			text-align: center;
+		}
+		.baby-especially img{
+			height: 100%; 
+		}
+		.baby-especially .img-par{
+			width: 50%;
+			/* width: 164px; */
+		}
+		.baby-service-right,.baby-service-left{
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			height: 78px;
+		}
+		.baby-service-right .baby-service-title{
+			width: 50%;
+			padding-right: 8px;
+			width: 50%;
+		}
+		.baby-service-right .baby-service-title p{
+			white-space: nowrap;
+			text-align: right;
+		}
+		.baby-service-right .baby-service-title p span:last-child{
+			margin-left: 12px;
+		}
+		.baby-service-right .img-par{
+			padding-left: 8px;
+			box-sizing: border-box;
+		}
+		.baby-service-left .baby-service-title{
+			width: 50%;
+			padding-left: 8px;
+		}
+		.baby-service-left .baby-service-title p{
+			white-space: nowrap;
+			text-align: left;
+		}
+		.baby-service-left .img-par{
+			padding-right: 8px;
+			display: flex;
+			justify-content: flex-end;
+			box-sizing: border-box;
+		}
+		
+		.baby-service-title p:first-child{
+			font-size: 28px;
+			color: #ff7f95;
+		}
+		.baby-service-title p:last-child{
+			font-size: 14px;
+			color: #353535;
+			margin-top: 10px;
+		}
+	</style>
+	<body>
+		<div class="title-content">
+        <a href="javascript:history.back();"><img src="./images/back.png" alt=""></a>
+        <span>综合服务</span>
+        <i></i>
+    </div>
+    <div class="swiper-container TopImage">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/comprehensiveBanner1.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/comprehensiveBanner1.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/comprehensiveBanner1.png" alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+	   <div class="swiper-pagination"></div>
+	    <!-- 如果需要导航按钮 -->
+	    <!--<div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>-->
+   </div>
+   	<div class="btn-content-par">
+         <div>
+          <p>综合服务</p>
+          <p>日常妈妈生活照顾</p>
+         </div>
+         <div>
+           <span>价格面议</span>
+         </div>
+    </div>
+    <div class="container">
+    	<div class="title">
+   			<img src="./images/icon1.png" alt="" id="icon1"/>
+   			<span>综合服务</span>
+   			<img src="./images/icon2.png" alt="" id="icon2"/>
+   		</div>
+		<div class="baby-services-content">
+			<div class="baby-top-title">
+				<span>月子餐</span>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						01
+					</div>
+					<span>第一阶段(1-7天)排 - 排净恶露，活血化瘀，健脾利湿</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						02
+					</div>
+					<span>第二阶段(8-14天)催 - 补血、滋阴，补中益气，预防腰酸背痛</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						03
+					</div>
+					<span>第三阶段(15-21天)补 - 滋补元气，安心神，清火润肺</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						04
+					</div>
+					<span>第四阶段(22-28天)修 - 减重塑体，强化体能，补气血</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						05 
+					</div>
+					<span>养身月子餐每天六餐送至房间</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						06
+					</div>
+					<span>养肝茶、生化汤、阶段饮品提供送至房间</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						07
+					</div>
+					<span>餐饮泌乳调理</span>
+				</div>
+			</div>
+			<div class="baby-service-pro">
+				<div>
+					<div class="baby-service-number">
+						08
+					</div>
+					<span>餐饮热量控制</span>
+				</div>
+			</div>
+		</div>
+	   	<div class="ruzhu">
+	   		<div class="huli">
+	   			<p>馆内特色</p>
+	   		</div>
+	   		<div class="content">
+	   			<div class="hulixiangqing">
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>国家医疗机构，独门独栋，环境优雅，人员单一</span>
+	   				</div>
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>完善的医疗应对体系，特殊情况本身就是医院，就医近</span>
+	   				</div>
+	   			</div>
+	   			<div class="hulixiangqing">
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>医院消毒隔离防御系统</span>
+	   				</div>
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>医疗级宝宝妈妈衣服清洗消毒</span>
+	   				</div>
+	   			</div>
+	   			<div class="hulixiangqing">
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>医疗级新风系统、净水系统</span>
+	   				</div>
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>专用停车位，免费停止</span>
+	   				</div>
+	   			</div>
+	   			<div class="hulixiangqing">
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>享受本院VIP产检服务，孕期产检不排队</span>
+	   				</div>
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>24小时护理人员呼叫系统</span>
+	   				</div>
+	   			</div>
+	   			<div class="hulixiangqing">
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>医疗级感染控制管理</span>
+	   				</div>
+	   				<div>
+	   					<img src="./images/yes.png" alt="" />
+	   					<span>安保配有24小时专班人员值班及监控系统</span>
+	   				</div>
+	   			</div>
+				<div class="hulixiangqing">
+					<div>
+						<img src="./images/yes.png" alt="" />
+						<span>咖啡吧、洗头区、药浴室、多元教室、健身房、早教智能馆、早教体能馆</span>
+					</div>
+					<div>
+						<img src="./images/yes.png" alt="" />
+						<span>本院医师查房，品质安全有保障</span>
+					</div>
+				</div>
+	   		</div>
+	   	</div>
+	   	<div class="yuezi">
+	   		 <div class="huli yuezi_huli">
+	   			<p>入住大礼包</p>
+	   		</div>
+			<div class="yuezi-content">
+				<div class="yuezi_container">
+					<i>01</i>
+					<span>尿不湿2包</span>
+				</div>
+				<div class="yuezi_container">
+					<i>02</i>
+					<span>胎衣2套</span>
+				</div>
+				<div class="yuezi_container">
+					<i>03</i>
+					<span>高档纯棉哺乳衣2套</span>
+				</div>
+				<div class="yuezi_container">
+					<i>04</i>
+					<span>湿巾80抽/6包</span>
+				</div>
+				<div class="yuezi_container">
+					<i>05</i>
+					<span>月子帽1顶，月子鞋1双</span>
+				</div>
+				<div class="yuezi_container">
+					<i>06</i>
+					<span>专属洗脸巾2张</span>
+				</div>
+				<div class="yuezi_container">
+					<i>07</i>
+					<span>月子牙刷，牙膏1套</span>
+				</div>
+				<div class="yuezi_container">
+					<i>08</i>
+					<span>专属餐具1组</span>
+				</div>
+				<div class="yuezi_container">
+					<i>09</i>
+					<span>卷纸3卷</span>
+				</div>
+				<div class="yuezi_container">
+					<i>10</i>
+					<span>抽纸3个</span>
+				</div>
+				<div class="yuezi_container">
+					<i>11</i>
+					<span>梳理棒(台湾)1支</span>
+				</div>
+				<div class="yuezi_container">
+					<i>12</i>
+					<span>产褥垫1包(20片)</span>
+				</div>
+				<div class="yuezi_container">
+					<i>13</i>
+					<span>泡脚桶1个</span>
+				</div>
+				<div class="yuezi_container">
+					<i>14</i>
+					<span>个人卫生清洗器1支</span>
+				</div>
+			</div>
+	   	</div>
+	   	<div class="baby-especially">
+	   		<p>免费使用</p>
+	   		<div class="baby-service-right">
+	   			<div class="baby-service-title">
+	   				<p>01</p>
+	   				<p>
+	   					<span>日常用品+沐浴组</span>
+	   				</p>
+	   			</div>
+	   			<div class="img-par">
+	   				<img src="./images/comprehensiveFree1.png" >
+	   			</div>
+	   		</div>
+	   		<div class="baby-service-left">
+	   			<div class="img-par">
+	   				<img src="./images/comprehensiveFree2.png" >
+	   			</div>
+	   			<div class="baby-service-title">
+	   				<p>02</p>
+	   				<p>
+	   					<span>美德乐手动吸乳器</span>
+	   				</p>
+	   			</div>
+	   		</div>
+	   		<div class="baby-service-right">
+	   			<div class="baby-service-title">
+	   				<p>03</p>
+	   				<p>
+	   					<span>美德乐医用级电动吸乳器</span>
+	   				</p>
+	   			</div>
+	   			<div class="img-par">
+	   				<img src="./images/comprehensiveFree3.png" >
+	   			</div>
+	   		</div>
+	   		<div class="baby-service-left">
+	   			<div class="img-par">
+	   				<img src="./images/comprehensiveFree4.png" >
+	   			</div>
+	   			<div class="baby-service-title">
+	   				<p>04</p>
+	   				<p>
+	   					<span>消毒锅、温奶器</span>
+	   				</p>
+	   			</div>
+	   		</div>
+	   		<div class="baby-service-right">
+	   			<div class="baby-service-title">
+	   				<p>05</p>
+	   				<p>
+	   					<span>宝宝用品</span>
+	   				</p>
+	   			</div>
+	   			<div class="img-par">
+	   				<img src="./images/comprehensiveFree5.png" >
+	   			</div>
+	   		</div>
+	   	</div>
+	   	<div class="phone">
+	   		<div class="phone_icon">
+	   			<img src="./images/phone3.png" alt="" />
+	   			<p>电话</p>
+	   		</div>
+	   		<div class="btn">
+	   			<span>立即预约</span>
+	   		</div>
+	   	</div>
+   	</div>
+	</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container',{
+		pagination: {
+		    el: '.swiper-pagination',
+		},
+		autoplay: {
+		    delay: 2000,
+		    stopOnLastSlide: false,
+		    disableOnInteraction: true,
+		},
+	    on:{
+	        init: function(){
+	            swiperAnimateCache(this); //隐藏动画元素 
+	            this.emit('slideChangeTransitionEnd');//在初始化时触发一次slideChangeTransitionEnd事件
+	        }, 
+	        slideChangeTransitionEnd: function(){ 
+	            swiperAnimate(this); //每个slide切换结束时运行当前slide动画
+	            this.slides.eq(this.activeIndex).find('.ani').removeClass('ani');//动画只展示一次
+	        } 
+	    }
+	});
+	
+</script>
